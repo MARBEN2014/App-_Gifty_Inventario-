@@ -2,10 +2,12 @@ import pandas as pd
 import os
 
  
-# ruta del archivo , donde quieri que se guarde , cambiará de acuardo a nuestro pc
  
-
-ARCHIVO_EXCEL = r"V:\1.- Diplomado BIG DATA\2.-Python para Machine Learning\2.- trabajo grupal\GiftyApp\data\inventarioGrupo3.xlsx"
+ 
+"""estas dos lineas ayuda que el archivo se cree y se guarde directamente
+ en la carpeta GIFTYAPP, asi fucniona bien en cualquier pc"""
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ARCHIVO_EXCEL = os.path.join(BASE_DIR, "data", "inventario_gifty_Grupo3.xlsx")
 
 # cabeceras que ttendra nuestro df
 COLUMNAS = ["COD", "NOMBRE", "PRECIO", "CANT", "VENDIDOS"]
@@ -13,7 +15,8 @@ COLUMNAS = ["COD", "NOMBRE", "PRECIO", "CANT", "VENDIDOS"]
 
  
 """funcion para mostar donde se guarda el archivo, 
-puede ser util para el cliente""" 
+se podria usar o saacar es opcional
+ """ 
  
 def mostrar_ruta_excel():
     """Muestra la ruta del archivo Excel que utiliza el sistema."""
