@@ -31,7 +31,10 @@ def ejecutar_menu(inventario):
             case "7":
                 generar_reportes(inventario)
             case "8":
+                print("=" * 42)
                 print("Saliendo... Muchas gracias por usar Gifty.")
+                print("=" * 42)
+
                 break
             case "9":
                 mostrar_ruta_excel()
